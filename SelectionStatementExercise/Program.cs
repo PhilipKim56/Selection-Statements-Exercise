@@ -10,21 +10,21 @@
         public static void GuessNumber()
         {
             var r = new Random();
-            var favNumber = r.Next(1, 100);
+            var favNumber = r.Next(1, 10);
 
-            Console.WriteLine("Choose a number between 1 - 100");
+            Console.WriteLine("Choose a number between 1 - 10");
             var userInput = int.Parse(Console.ReadLine());
 
-            if (userInput == 37)
+            if (userInput == favNumber)
             {
                 Console.WriteLine("You are correct. Great Job!!!");
             }
-            else if (userInput <= 36) 
+            else if (userInput <= favNumber) 
             {
                 Console.WriteLine("Too low, Try again");
              
             }
-            else if (userInput >=38) 
+            else if (userInput >= favNumber) 
             {
                 Console.WriteLine("Too High. Try again");
             }
